@@ -1,0 +1,4 @@
+/db/hanami_stats_development
+/db/hanami_stats_test
+/public/assets*
+/tmp

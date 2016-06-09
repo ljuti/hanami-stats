@@ -5,7 +5,6 @@ gem 'rake'
 gem 'hanami',       '0.7.3'
 gem 'hanami-model', '~> 0.5'
 
-
 group :test do
   gem 'rspec'
   gem 'capybara'

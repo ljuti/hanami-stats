@@ -17,6 +17,7 @@ Hanami::Model.configure do
   #    adapter type: :sql, uri: 'mysql://localhost/hanami_stats_development'
   #
   adapter type: :file_system, uri: ENV['HANAMI_STATS_DATABASE_URL']
+  # adapter type: :memory, uri: "memory://localhost/hanami_stats"
 
   ##
   # Database mapping

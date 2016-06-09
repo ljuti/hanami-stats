@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe Version do
+RSpec.describe PlatformVersion do
   describe "Initializing a new object" do
     context "No attributes given" do
       subject { described_class.new }

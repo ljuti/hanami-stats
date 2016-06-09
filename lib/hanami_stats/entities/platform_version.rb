@@ -1,4 +1,4 @@
-class Version
+class PlatformVersion
   include Hanami::Entity
   attributes :version, :count, :type, :platform
 

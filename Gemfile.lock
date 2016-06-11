@@ -2,6 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     abstract_type (0.0.7)
+    activesupport (4.2.6)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     adamantium (0.2.0)
       ice_nine (~> 0.11.0)
       memoizable (~> 0.4.0)
@@ -24,6 +30,8 @@ GEM
     diff-lcs (1.2.5)
     dotenv (2.1.1)
     equalizer (0.0.11)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     hanami (0.7.3)
       bundler (~> 1.6)
       dotenv (~> 2.0)
@@ -65,7 +73,9 @@ GEM
     http_router (0.11.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
+    i18n (0.7.0)
     ice_nine (0.11.2)
+    json (1.8.3)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     memoizable (0.4.2)
@@ -74,6 +84,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
+    minitest (5.9.0)
     morpher (0.2.6)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
@@ -133,6 +144,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
     unparser (0.2.5)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
@@ -152,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   capybara
+  factory_girl
   hanami (= 0.7.3)
   hanami-model (~> 0.5)
   mutant-rspec

@@ -7,9 +7,10 @@ gem 'hanami-model', '~> 0.5'
 gem 'semantic'
 
 group :test do
-  gem 'rspec'
-  gem 'mutant-rspec'
   gem 'capybara'
+  gem 'factory_girl'
+  gem 'mutant-rspec'
+  gem 'rspec'
 end
 
 group :production do

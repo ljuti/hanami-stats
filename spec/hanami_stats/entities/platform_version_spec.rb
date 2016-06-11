@@ -156,4 +156,22 @@ RSpec.describe PlatformVersion do
       end
     end
   end
+
+  describe "#semver?" do
+    context "Valid SemVer" do
+      subject { described_class.new(version: "1.2.3", platform: "linux") }
+
+      it "returns true for valid semvers" do
+        expect(subject).to be_semver
+      end
+    end
+
+    context "Invalid SemVer" do
+      subject { described_class.new(version: "1.2", platform: "linux") }
+
+      it "returns true for valid semvers" do
+        expect(subject).not_to be_semver
+      end
+    end
+  end
 end

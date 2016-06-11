@@ -13,6 +13,12 @@ module Parsers
       true
     end
 
+    def parse_all
+      files.each do |file|
+        parse(file.file)
+      end
+    end
+
     def parse(file)
       rows = read_csv(file)
       process(rows)

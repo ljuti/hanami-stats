@@ -9,4 +9,16 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL,           feature: true
   config.include Capybara::RSpecMatchers, feature: true
+
+  config.before(:each) do
+    parser = Parsers::CsvParser.new
+
+    Dir.glob("data/*.csv") do |file|
+      parser.parse(file)
+    end
+  end
+
+  config.after(:each) do
+    PlatformVersionRepository.clear
+  end
 end

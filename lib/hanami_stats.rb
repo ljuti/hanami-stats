@@ -16,8 +16,8 @@ Hanami::Model.configure do
   #    adapter type: :sql, uri: 'postgres://localhost/hanami_stats_development'
   #    adapter type: :sql, uri: 'mysql://localhost/hanami_stats_development'
   #
-  adapter type: :file_system, uri: ENV['HANAMI_STATS_DATABASE_URL']
-  # adapter type: :memory, uri: "memory://localhost/hanami_stats"
+  # adapter type: :file_system, uri: ENV['HANAMI_STATS_DATABASE_URL']
+  adapter type: :memory, uri: "memory://localhost/hanami_stats"
 
   ##
   # Database mapping
@@ -26,11 +26,11 @@ Hanami::Model.configure do
   #
   # You can specify mapping file to load with:
   #
-  # mapping "#{__dir__}/config/mapping"
+  mapping "#{__dir__}/config/mapping"
   #
   # Alternatively, you can use a block syntax like the following:
   #
-  mapping do
+  # mapping do
     # collection :users do
     #   entity     User
     #   repository UserRepository
@@ -38,7 +38,7 @@ Hanami::Model.configure do
     #   attribute :id,   Integer
     #   attribute :name, String
     # end
-  end
+  # end
 end.load!
 
 Hanami::Mailer.configure do

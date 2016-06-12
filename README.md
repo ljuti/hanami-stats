@@ -1,5 +1,6 @@
 # Hanami-stats
 
+[![Code Climate](https://codeclimate.com/repos/575d585ffbc7580075009843/badges/2ddd2480b416c3123094/gpa.svg)](https://codeclimate.com/repos/575d585ffbc7580075009843/feed)
 
 ## Setup
 

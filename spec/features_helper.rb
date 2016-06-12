@@ -11,6 +11,8 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, feature: true
 
   config.before(:each) do
+    PlatformVersionRepository.clear
+
     parser = Parsers::CsvParser.new
 
     Dir.glob("data/*.csv") do |file|

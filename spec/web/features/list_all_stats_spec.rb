@@ -13,5 +13,9 @@ describe "All statistics" do
     expect(json["android"]).to be_a Integer
     expect(json["ios"]).to be_a Integer
     expect(json["windows-phone"]).to be_a Integer
+
+    expect(json["android"]).to eq 35065928
+    expect(json["ios"]).to eq 21287488
+    expect(json["windows-phone"]).to eq 4503628
   end
 end

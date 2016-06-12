@@ -47,8 +47,8 @@ class PlatformVersionCollection
 
   def to_json
     {
-      "other": counts_for_other,
-      "total": total_count,
+      other: counts_for_other,
+      total: total_count,
     }.merge(counts_per_major_version.to_h).to_json
   end
 end

@@ -16,7 +16,7 @@ class PlatformVersion
   end
 
   def count=(count)
-    @count = count.to_s.gsub(",","").to_i
+    @count = count.to_s.delete(",").to_i
   end
 
   def platform=(platform_string)

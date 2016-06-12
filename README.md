@@ -2,6 +2,8 @@
 
 [![Code Climate](https://codeclimate.com/repos/575d585ffbc7580075009843/badges/2ddd2480b416c3123094/gpa.svg)](https://codeclimate.com/repos/575d585ffbc7580075009843/feed)
 
+[![Build Status](https://travis-ci.org/ljuti/hanami-stats.svg?branch=master)](https://travis-ci.org/ljuti/hanami-stats)
+
 ## Setup
 
 To install the gems required by the application, run

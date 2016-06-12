@@ -27,9 +27,20 @@ class PlatformVersionCollection
     semvers.map(&:major).uniq.sort
   end
 
+  def counts_per_major_version
+    counts = []
+    major_versions.reverse.each do |major|
+      counts.push([major, semvers.select do |version|
+        version.major.equal?(major)
+      end.map(&:count).inject(&:+)])
+    end
+    counts
+  end
+
   def to_json
     {
-      "total": total_count
-    }
+      "total": total_count,
+      "results": counts_per_major_version
+    }.to_json
   end
 end

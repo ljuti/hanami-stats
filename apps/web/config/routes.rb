@@ -1,3 +1,2 @@
-get '/api/stats', to: 'stats#index'
-# Configure your routes here
-# See: http://www.rubydoc.info/gems/hanami-router/#Usage
+get "/api/stats", to: "stats#index"
+get "/api/stats/:platform", to: "stats#show"

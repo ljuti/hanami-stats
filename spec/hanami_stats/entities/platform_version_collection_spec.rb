@@ -52,6 +52,22 @@ RSpec.describe PlatformVersionCollection do
     end
   end
 
+  describe "#counts_per_major_version" do
+    before do
+      @collection = []
+      @collection.push(FactoryGirl.build(:platform_version, version: "2.3.4"))
+      @collection.push(FactoryGirl.build(:platform_version, version: "2.5.4"))
+      @collection.push(FactoryGirl.build(:platform_version, version: "1.3.4"))
+      @collection.push(FactoryGirl.build(:platform_version, version: "3.3.4"))
+    end
+
+    subject { described_class.new(versions: @collection).counts_per_major_version }
+
+    it "returns an array of counts per major version" do
+      expect(subject).to eq [[3,123], [2,246], [1,123]]
+    end
+  end
+
   describe "#to_json", skip: "Pending" do
     let(:collection) { FactoryGirl.build_list(:platform_version, 10) }
 

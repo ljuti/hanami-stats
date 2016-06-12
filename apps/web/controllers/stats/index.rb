@@ -3,6 +3,7 @@ module Web::Controllers::Stats
     include Web::Action
 
     def call(params)
+      self.body = PlatformVersionRepository.totals.to_json
     end
   end
 end

@@ -1,8 +1,10 @@
 class PlatformVersion
   include Hanami::Entity
+  extend Forwardable
+
   attributes :version, :count, :type, :platform
 
-  delegate :major, to: :version
+  def_delegators :version, :major, :major
 
   def version=(version_string)
     @version = begin
